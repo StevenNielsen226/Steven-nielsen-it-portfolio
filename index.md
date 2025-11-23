@@ -1,87 +1,53 @@
-# 👨‍💻 Steven Nielsen – IT Portfolio
+# Steven Nielsen – IT Homelab Portfolio
 
-Welcome to my professional IT portfolio.  
-This collection of hands-on labs demonstrates my skills in:
+Welcome to my IT homelab portfolio. These labs mirror real-world IT Support and Junior SysAdmin work, built using Windows Server, Windows 10/11, Active Directory, DNS, DHCP, and troubleshooting scenarios.
 
-- Windows Server Administration  
-- Active Directory  
-- DNS / DHCP / Group Policy  
-- Endpoint Support  
-- Networking & VPN  
-- Ticketing Systems  
-- Cloud Identity (Azure AD / M365)  
-- Security Fundamentals  
-
-All work shown here was completed as part of my technical labs while progressing through my **WGU Bachelor’s in IT** and building real-world experience for IT Support and SysAdmin roles.
+Each lab includes:
+- A full step-by-step walkthrough
+- Screenshots showing key configuration steps
+- A downloadable multi-page PDF lab report
+- Demonstrated skills relevant to IT Support and SysAdmin roles
 
 ---
 
-# 📂 Featured Labs
+## 🧪 Labs
 
-## 🔹 **Lab 1: Active Directory Domain Deployment**
-A full AD DS deployment from scratch, including DNS configuration, OU design, and user/group provisioning.
+### 🔹 [Lab 1 – Active Directory Domain Deployment](Lab1-WindowsServer_AD/README.md)
 
-👉 [View Lab 1](Labs/Lab1-ActiveDirectory/README.md)
+Deploying a Windows Server 2022 domain controller, configuring DNS, building organizational units, creating users, and managing security groups.
 
 Preview:
 
-![Lab 1 Preview](Lab1-WindowsServer_AD/screenshots/aduc-ou-structure.png)
+![Lab1 OU Structure](Lab1-WindowsServer_AD/images/aduc-ou-structure.png)
 
-
----
-
-## 🔹 **Lab 2: DNS, DHCP, and Group Policy (Coming Soon)**  
-- DNS zones  
-- DHCP scopes  
-- Group Policy creation  
-- Password policies  
-- GPUpdate verification
+> 📄 **Full Lab Report:**  
+> [Download Lab1 Report](Lab1-WindowsServer_AD/Lab1-WindowsServer_AD.pdf)
 
 ---
 
-## 🔹 **Lab 3: Ticketing System Simulation (Coming Soon)**  
-- Creating and resolving support tickets  
-- SLA-based priority handling  
-- Documentation and troubleshooting workflow  
-- Root cause analysis
+## 🚧 Upcoming Labs
+
+- Lab 2 – Client Domain Join & Basic Group Policy  
+- Lab 3 – DNS/DHCP Setup  
+- Lab 4 – File Sharing, NTFS, and Permissions  
+- Lab 5 – PowerShell Automation  
+- Lab 6 – Ticket-Based Troubleshooting Scenarios  
+
+Each future lab will have the same format.
 
 ---
 
-## 🔹 **Lab 4: VPN & Network Troubleshooting (Coming Soon)**  
-- VPN client configuration  
-- Route table analysis  
-- Firewall rule correction  
-- Connectivity validation
+## 🔧 Technologies Used
+
+- Windows Server 2022  
+- Windows 10/11 clients  
+- Active Directory Domain Services  
+- DNS & DHCP (future labs)  
+- PowerShell scripting  
+- Virtualization (VirtualBox / Hyper-V)  
 
 ---
 
-## 🔹 **Lab 5: Cloud Identity / Microsoft 365 Admin (Coming Soon)**  
-- User management  
-- MFA enforcement  
-- Conditional access  
-- Audit logs  
-- Sign-in analysis
-
----
-
-# 📞 Contact Me
-
-**LinkedIn:**  
-https://www.linkedin.com/in/steven-nielsen-33806919b
-
-**GitHub:**  
-https://github.com/StevenNielsen226
-
-I'm actively working toward my **first IT role at $30–$40/hr** and continuing my education through **WGU’s accelerated IT degree program**.  
-I'm available for:
-
-- IT Support  
-- Technical Support  
-- Service Desk  
-- Junior SysAdmin roles  
-- Apprenticeships  
-- Internship opportunities  
-
----
-
-# 🚀 More labs and portfolio updates coming soon!
+## 📫 Contact  
+- **Email:** steven.nielsen226@gmail.com  
+- **LinkedIn:** (insert your link)
