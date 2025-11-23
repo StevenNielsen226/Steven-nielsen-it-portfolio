@@ -55,13 +55,13 @@ This lab demonstrates skills in **Windows Server administration, AD DS, OU desig
 **Screenshots**
 
 - Role/feature selection  
-  ![Select AD DS Role](images/ad-install-role-selection.png)
+  ![Select AD DS Role](.images/ad-install-role-selection.png)
 
 - Required management tools  
-  ![Add Features for AD DS](images/ad-install-features.png)
+  ![Add Features for AD DS](.images/ad-install-features.png)
 
 - Destination server selection  
-  ![Select Destination Server](images/ad-install-server-selection.png)
+  ![Select Destination Server](.images/ad-install-server-selection.png)
 
 ---
 
@@ -71,7 +71,7 @@ This lab demonstrates skills in **Windows Server administration, AD DS, OU desig
    **Promote this server to a domain controller**.
 2. Select **Add a new forest** and set the root domain name to `lab.local`.
 
-   ![Deployment Configuration](images/ad-deployment-configuration.png)
+   ![Deployment Configuration](.images/ad-deployment-configuration.png)
 
 3. On **Domain Controller Options**, keep defaults:
    - Forest functional level: *Windows Server 2016*
@@ -79,12 +79,12 @@ This lab demonstrates skills in **Windows Server administration, AD DS, OU desig
    - DNS server + Global Catalog checked
    - Set the **DSRM password**.
 
-   ![Domain Controller Options](images/ad-domain-controller-options.png)
+   ![Domain Controller Options](.images/ad-domain-controller-options.png)
 
 4. Continue through the wizard and review the **Prerequisites Check**.
 5. Once all checks pass, start the installation and allow the server to reboot.
 
-   ![Prerequisites Check](images/ad-prereq-check.png)
+   ![Prerequisites Check](.images/ad-prereq-check.png)
 
 ---
 
@@ -101,10 +101,10 @@ This lab demonstrates skills in **Windows Server administration, AD DS, OU desig
 **Screenshots**
 
 - Final OU structure  
-  ![OU Structure](images/aduc-ou-structure.png)
+  ![OU Structure](.images/aduc-ou-structure.png)
 
 - Alternate OU view  
-  ![OU Structure (Alternative View)](images/aduc-ou-alt.png)
+  ![OU Structure (Alternative View)](.images/aduc-ou-alt.png)
 
 ---
 
@@ -117,7 +117,7 @@ This lab demonstrates skills in **Windows Server administration, AD DS, OU desig
 **Screenshots**
 
 - HR security group in HR OU  
-  ![HR Group](images/aduc-hr-group.png)
+  ![HR Group](.images/aduc-hr-group.png)
 
 ---
 
@@ -136,13 +136,13 @@ This lab demonstrates skills in **Windows Server administration, AD DS, OU desig
 **Screenshots**
 
 - HR users in HR OU  
-  ![HR Users](images/aduc-hr-users.png)
+  ![HR Users](.images/aduc-hr-users.png)
 
 - HR Group membership  
-  ![HR Group Members](images/aduc-hr-group-members.png)
+  ![HR Group Members](..images/aduc-hr-group-members.png)
 
 - IT users and group in IT OU  
-  ![IT Admin & Group](images/aduc-it-group-users.png)
+  ![IT Admin & Group](..images/aduc-it-group-users.png)
 
 ---
 
