@@ -25,7 +25,7 @@ A full AD DS deployment from scratch, including DNS configuration, OU design, an
 
 Preview:
 
-![AD Preview](Labs/Lab1-ActiveDirectory/images/aduc-ou-structure.png)
+![AD Preview](Lab1-WindowsServer_AD/screenshots/aduc-ou-structure.png)
 
 ---
 
