@@ -1,63 +1,53 @@
 # Steven Nielsen – IT Homelab Portfolio
 
-Welcome! This repository contains hands-on labs that mirror real-world IT support and junior system administration work. Each lab includes:
+Welcome to my IT homelab portfolio. These labs mirror real-world IT Support and Junior SysAdmin work, built using Windows Server, Windows 10/11, Active Directory, DNS, DHCP, and troubleshooting scenarios.
 
-- A **step-by-step walkthrough**
-- **Screenshots** of key configuration steps
-- A **multi-page PDF report** you can download
-- Clear mapping to skills relevant for **IT Support, Service Desk, and Junior SysAdmin** roles
+Each lab includes:
+- A full step-by-step walkthrough
+- Screenshots showing key configuration steps
+- A downloadable multi-page PDF lab report
+- Demonstrated skills relevant to IT Support and SysAdmin roles
 
 ---
 
 ## 🧪 Labs
 
-### 🔹 [Lab 1 – Active Directory Domain Deployment](lab1/README.md)
+### 🔹 [Lab 1 – Active Directory Domain Deployment](Lab1-WindowsServer_AD/README.md)
 
-**Focus:** Windows Server 2022, AD DS, OU design, user and group management  
-**Highlights:**
-
-- Installed and configured **Active Directory Domain Services**
-- Promoted a server to a **domain controller** for `lab.local`
-- Designed department-based **OU structure** (HR, IT, Sales, Temp)
-- Created **security groups** and **user accounts** with proper membership
+Deploying a Windows Server 2022 domain controller, configuring DNS, building organizational units, creating users, and managing security groups.
 
 Preview:
 
-![Lab 1 OU Structure](lab1/images/aduc-ou-structure.png)
+![Lab1 OU Structure](Lab1-WindowsServer_AD/images/aduc-ou-structure.png)
 
-> See the full write-up here: [Lab 1 README](lab1/README.md)  
-> Download the report: [lab1-report.pdf](lab1/lab1-report.pdf)
+> 📄 **Full Lab Report:**  
+> [Download Lab1 Report](Lab1-WindowsServer_AD/Lab1-WindowsServer_AD.pdf)
 
 ---
 
 ## 🚧 Upcoming Labs
 
-Planned labs that will be added to this portfolio:
+- Lab 2 – Client Domain Join & Basic Group Policy  
+- Lab 3 – DNS/DHCP Setup  
+- Lab 4 – File Sharing, NTFS, and Permissions  
+- Lab 5 – PowerShell Automation  
+- Lab 6 – Ticket-Based Troubleshooting Scenarios  
 
-- **Lab 2 – Windows 10/11 Client Domain Join & GPO Basics**
-- **Lab 3 – DHCP & DNS Configuration for a Small Network**
-- **Lab 4 – File Server with NTFS & Share Permissions**
-- **Lab 5 – Basic PowerShell Automation for User Management**
-- **Lab 6 – Ticket-Driven Troubleshooting Scenarios**
-
-Each future lab will follow the same structure as Lab 1: README, screenshots, and a PDF report.
+Each future lab will have the same format.
 
 ---
 
-## 🔧 Tech Stack & Tools
+## 🔧 Technologies Used
 
-- Windows Server 2022 (Evaluation)
-- Windows 10/11 client VMs
-- Active Directory Domain Services (AD DS)
-- DNS, basic DHCP (future labs)
-- PowerShell (future labs)
-- Virtualization via VirtualBox / Hyper-V
+- Windows Server 2022  
+- Windows 10/11 clients  
+- Active Directory Domain Services  
+- DNS & DHCP (future labs)  
+- PowerShell scripting  
+- Virtualization (VirtualBox / Hyper-V)  
 
 ---
 
-## 📫 Contact
-
-If you’d like to talk about **IT Support** or **Junior SysAdmin** opportunities in the Vancouver, WA / Portland, OR area:
-
-- **LinkedIn:** (add your profile link here)  
-- **Email:** steven.nielsen226@gmail.com
+## 📫 Contact  
+- **Email:** steven.nielsen226@gmail.com  
+- **LinkedIn:** (insert your link)
