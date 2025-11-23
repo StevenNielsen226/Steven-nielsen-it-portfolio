@@ -1,48 +1,119 @@
-# Lab 1: Active Directory Domain Deployment
+# Lab 1 – Active Directory Domain Deployment
 
-A full Active Directory deployment from scratch, including DNS configuration, OU design, and user/group provisioning.
+**Goal:** Build a fully functional Windows Server 2022 domain controller, configure DNS, create organizational units, and set up users and security groups under the new domain `lab.local`.
 
-## 🔧 Skills Demonstrated
-- Windows Server installation & role configuration  
-- Active Directory Domain Services (AD DS)  
+---
+
+## 📂 Environment
+
+- **Server OS:** Windows Server 2022 Standard (Evaluation)  
+- **Domain:** `lab.local`  
+- **Tools:** Server Manager, AD DS Configuration Wizard, ADUC  
+- **Folder Structure:**  
+  Lab1-WindowsServer_AD/  
+  ├── README.md  
+  ├── Lab1-WindowsServer_AD.pdf  
+  └── images/
+
+---
+
+## 🏗 Step 1 – Install Active Directory Domain Services (AD DS)
+
+Open **Server Manager → Add Roles and Features**.
+
+Screenshots:
+
+![Server Selection](images/ad-install-server-selection.png)  
+![Role Selection](images/ad-install-role-selection.png)  
+![Feature Selection](images/ad-install-features.png)
+
+---
+
+## 🏗 Step 2 – Promote Server to Domain Controller
+
+Configure new forest: `lab.local`
+
+![Deployment Configuration](images/ad-deployment-configuration.png)
+
+Set DSRM password and DNS/GC settings:
+
+![Domain Controller Options](images/ad-domain-controller-options.png)
+
+Run prerequisites – confirm success:
+
+![Prerequisite Check](images/ad-prereq-check.png)
+
+---
+
+## 🧩 Step 3 – Build Organizational Unit (OU) Structure
+
+Created the following OUs:
+
+- **HR**
+- **IT**
+- **Sales**
+- **Temp**
+
+Screenshot:
+
+![OU Structure](images/aduc-ou-structure.png)
+
+Alternate view:
+
+![OU Alt View](images/aduc-ou-alt.png)
+
+---
+
+## 👥 Step 4 – Create Security Groups
+
+- **HR Group** → for HR department users  
+- **IT Group** → for IT admins  
+
+Screenshot:
+
+![HR Group](images/aduc-hr-group.png)
+
+---
+
+## 🧑‍💼 Step 5 – Create Users & Assign to Groups
+
+Users created per department:
+
+- HR: `HR User1`, `HR User2`  
+- IT: `IT Admin`, `IT Admin2`
+
+Screenshots:
+
+![HR Users](images/aduc-hr-users.png)
+![HR Group Members](images/aduc-hr-group-members.png)
+![IT Group & Users](images/aduc-it-group-users.png)
+
+---
+
+## ✔ Verification
+
+- Domain `lab.local` successfully deployed  
+- DNS configured automatically during promotion  
+- All OUs created  
+- Groups created properly  
+- Users assigned correctly to each OU  
+- Group membership validated  
+
+---
+
+## 📄 Full Lab Report
+
+Download the full PDF walkthrough:
+
+👉 [Lab1-WindowsServer_AD.pdf](Lab1-WindowsServer_AD.pdf)
+
+---
+
+## 🧠 Skills Demonstrated
+
+- AD DS installation  
 - DNS configuration  
-- Organizational Unit (OU) design  
-- Security group creation  
-- User provisioning  
-- Admin documentation
-
----
-
-## 📄 Full Lab Report (PDF)
-[📥 Download Lab 1 PDF](./Lab1-Active-Directory-Deployment.pdf)
-
----
-
-## 🖼️ Preview  
-![OU Structure Preview](./images/aduc-ou-structure.png)
-
----
-
-## 📷 Screenshots
-
-### AD DS Installation Steps
-![Deployment Configuration](./images/ad-deployment-configuration.png)
-![Domain Controller Options](./images/ad-domain-controller-options.png)
-![Install Features](./images/ad-install-features.png)
-![Role Selection](./images/ad-install-role-selection.png)
-![Server Selection](./images/ad-install-server-selection.png)
-![Prerequisites Check](./images/ad-prereq-check.png)
-
-### OU Structure & User Creation
-![OU Structure](./images/aduc-ou-structure.png)
-![Alternate OU View](./images/aduc-ou-alt.png)
-
-### HR Group + Users
-![HR Group Created](./images/aduc-hr-group.png)
-![HR Group Members](./images/aduc-hr-group-members.png)
-![HR Users](./images/aduc-hr-users.png)
-
-### IT Group + Users
-![IT Group Users](./images/aduc-it-group-users.png)
-
----
+- Domain controller promotion  
+- OU planning & structure  
+- User account management  
+- Group membership & access control  
