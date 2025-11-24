@@ -25,12 +25,13 @@ Preview:
 
 ---
 
-### 🔹 [Lab 2 – Windows 10 Client Domain Join + DNS Configuration + Remote Desktop](Lab2-DNS_DHCP_GPO/README.md)
+### 🔹 [Lab 2 – Windows 10 Client Domain Join + DNS Configuration + Remote Desktop](Lab2-Win10-DomainJoin/README.md)
+
 
 Deploying a Windows 10 client, configuring DNS, joining the client to **lab.local**, validating DNS with `ping` and `nslookup`, testing domain logons, enabling Remote Desktop, assigning RDP permissions, and successfully connecting to the client from the Domain Controller over RDP.
 
 > 📄 **Full Lab Report:**  
-> [Download Lab2 Report](Lab2-DNS_DHCP_GPO/Lab2-Win10-Client-DomainJoin-DNS-RDP.pdf)
+> [Download Lab2 Report](Lab2-Win10-DomainJoin/Lab2-Win10-Client-DomainJoin-DNS-RDP.pdf)
 
 ---
 

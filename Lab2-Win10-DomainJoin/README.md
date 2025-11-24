@@ -14,7 +14,7 @@ In this lab you:
 - Enable Remote Desktop and test an RDP session
 
 All screenshots for this lab are stored in:  
-`Lab2-DNS_DHCP_GPO/Images`
+`Lab2-Win10-DomainJoin/Images`
 
 ---
 
