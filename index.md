@@ -53,5 +53,5 @@ Each future lab will maintain the same clean structure, documentation quality, a
 ---
 
 ## 📫 Contact  
-- **Email:** steven.nielsen226@gmail.com  
-- **LinkedIn:** https://www.linkedin.com/in/steven-nielsen-33806919b/
+- **Email:** <steven.nielsen226@gmail.com>
+- **LinkedIn:** <https://www.linkedin.com/in/steven-nielsen-33806919b/>
