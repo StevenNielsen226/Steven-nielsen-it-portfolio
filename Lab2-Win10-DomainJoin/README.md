@@ -203,12 +203,12 @@ Enter the client IP:
 
 ### Successful RDP Session
 
-![RDP Active](./Images/Lab2-RemoteDesktop-SessionActive.png)
+![Client Controlled](./Images/RemoteDesktop-Client-Controlled-Session.png)
+
 
 Run inside RDP:
 whoami
-
-![Client Controlled](./Images/RemoteDesktop-Client-Controlled-Session.png)
+![RDP Active](./Images/Lab2-RemoteDesktop-SessionActive.png)
 
 ---
 
