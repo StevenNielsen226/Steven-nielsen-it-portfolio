@@ -50,4 +50,4 @@ Each future lab will have the same format.
 
 ## 📫 Contact  
 - **Email:** steven.nielsen226@gmail.com  
-- **LinkedIn:** (insert your link)
+- **LinkedIn:** https://www.linkedin.com/in/steven-nielsen-33806919b/

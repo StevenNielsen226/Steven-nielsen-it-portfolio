@@ -3,10 +3,10 @@
 Welcome to my IT homelab portfolio. These labs mirror real-world IT Support and Junior SysAdmin work, built using Windows Server, Windows 10/11, Active Directory, DNS, DHCP, and troubleshooting scenarios.
 
 Each lab includes:
-- A full step-by-step walkthrough
-- Screenshots showing key configuration steps
-- A downloadable multi-page PDF lab report
-- Demonstrated skills relevant to IT Support and SysAdmin roles
+- A full step-by-step walkthrough  
+- Screenshots showing key configuration steps  
+- A downloadable multi-page PDF lab report  
+- Demonstrated skills relevant to IT Support and SysAdmin roles  
 
 ---
 
@@ -25,15 +25,23 @@ Preview:
 
 ---
 
+### 🔹 [Lab 2 – Windows 10 Client Domain Join + DNS Configuration + Remote Desktop](Lab2-DNS_DHCP_GPO/README.md)
+
+Deploying a Windows 10 client, configuring DNS, joining the client to **lab.local**, validating DNS with `ping` and `nslookup`, testing domain logons, enabling Remote Desktop, assigning RDP permissions, and successfully connecting to the client from the Domain Controller over RDP.
+
+> 📄 **Full Lab Report:**  
+> [Download Lab2 Report](Lab2-DNS_DHCP_GPO/Lab2-Win10-Client-DomainJoin-DNS-RDP.pdf)
+
+---
+
 ## 🚧 Upcoming Labs
 
-- Lab 2 – Client Domain Join & Basic Group Policy  
 - Lab 3 – DNS/DHCP Setup  
 - Lab 4 – File Sharing, NTFS, and Permissions  
 - Lab 5 – PowerShell Automation  
 - Lab 6 – Ticket-Based Troubleshooting Scenarios  
 
-Each future lab will have the same format.
+Each future lab will maintain the same clean structure, documentation quality, and professionalism.
 
 ---
 
@@ -50,4 +58,4 @@ Each future lab will have the same format.
 
 ## 📫 Contact  
 - **Email:** steven.nielsen226@gmail.com  
-- **LinkedIn:** (insert your link)
+- **LinkedIn:** https://www.linkedin.com/in/steven-nielsen-33806919b/
