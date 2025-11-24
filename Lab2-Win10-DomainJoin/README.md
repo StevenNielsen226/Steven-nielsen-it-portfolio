@@ -4,14 +4,15 @@
 **Client VM:** `Win10-Client`  
 **Domain:** `lab.local`
 
-This lab builds on **Lab 1**. You already have a Windows Server 2022 domain controller at `10.0.0.124`.  
-In this lab you:
+This lab builds on **Lab 1**, where your Server 2022 VM was promoted to a domain controller.  
+In this lab, you:
 
 - Build a Windows 10 client VM  
 - Join it to the `lab.local` domain  
-- Point the client DNS to the domain controller  
-- Verify name resolution and connectivity  
-- Enable Remote Desktop and test an RDP session
+- Point the client’s DNS to the domain controller  
+- Validate DNS using ping and nslookup  
+- Enable Remote Desktop  
+- Connect to the client from the server  
 
 All screenshots for this lab are stored in:  
 `Lab2-Win10-DomainJoin/Images`
@@ -20,159 +21,209 @@ All screenshots for this lab are stored in:
 
 ## 1. Create the Windows 10 Client VM
 
-1. In **VirtualBox**, create a new VM named **Win10-Client** (50 GB disk, 4 GB RAM).
-2. Attach the Windows 10 ISO to the VM.
+1. Create a new VM in VirtualBox named **Win10-Client**  
+   - 4 GB RAM  
+   - 50 GB disk  
+   - Attach Windows 10 ISO
 
-   ![Windows Setup language screen](./Images/Lab2_ClientSetup_03_WindowsSetup_LanguageScreen.png)
+2. Start the VM and go through Windows Setup:
 
-3. Install Windows 10 with default options.
-4. After installation, sign in with the **localadmin** account and verify the desktop loads.
+   ![Windows Setup](./Images/Lab2_ClientSetup_03_WindowsSetup_LanguageScreen.png)
 
-   ![Client desktop after install](./Images/Lab2_ClientSetup_08_DesktopLoaded.png)
+3. Log in as the local admin and confirm the desktop loads:
 
-5. Confirm the virtual disk layout looks correct in VirtualBox.
+   ![Desktop](./Images/Lab2_ClientSetup_08_DesktopLoaded.png)
 
-   ![VirtualBox storage layout](./Images/Lab2_ClientSetup_StorageLayout_Correct.png)
+4. Confirm the VirtualBox storage layout:
+
+   ![Storage Layout](./Images/Lab2_ClientSetup_StorageLayout_Correct.png)
 
 ---
 
 ## 2. Verify Server and Client Network Settings
 
-Before joining the domain, confirm both machines are on the same network and that the server has a stable IP.
+### Server IP (Server-2022-DC-Portfolio)
 
-1. On the **Server 2022** VM, run:
+Run the following:
 
-   ```powershell
-   ipconfig
-   Expected:
-
-IPv4 Address: 10.0.0.124
-
-Default Gateway: 10.0.0.1
-
-On the Win10-Client, open Command Prompt:
 ipconfig
 
+Expected (your screenshot):
 
-Expected:
+- IPv4: **10.0.0.124**  
+- Gateway: **10.0.0.1**
 
-IPv4 Address: 10.0.0.52
+![Server IP](./Images/Lab2_Server_01_ipconfig.png)
 
-Default Gateway: 10.0.0.1
+---
 
-Test connectivity (client → server):
+### Client IP (Win10-Client)
+
+Run:
+
+ipconfig
+
+Expected (your screenshot):
+
+- IPv4: **10.0.0.52**  
+- Gateway: **10.0.0.1**
+
+![Client IP](./Images/Lab2_ClientSetup_08_ipconfig.png)
+
+---
+
+### Test Ping to Domain Controller
+
+Run:
+
 ping 10.0.0.124
 
+![Ping](./Images/Client-Ping-Server.png)
 
-You should receive 4 replies, 0% loss.
+Success = **reply with 0% loss**.
 
-🔹 3. Configure DNS & Join the Domain
-1. Open Network Adapter Settings:
+---
 
-Control Panel → Network and Internet → Network and Sharing Center → Change adapter settings
+## 3. Configure DNS and Join the Domain
 
-Right-click Ethernet → Properties → IPv4 → Properties
+### Set DNS to the Domain Controller
 
-Set:
+1. Open:  
+   Control Panel → Network and Internet → Network and Sharing Center  
+   → Change adapter settings  
+   → Ethernet → Properties → IPv4 → Properties
 
-Obtain an IP automatically
+2. Set:
 
-DNS server: 10.0.0.124
+- Obtain IP automatically  
+- Use the following DNS server: **10.0.0.124**
 
-2. Flush DNS cache:
-ipconfig /flushdns
+![DNS Settings](./Images/Lab2_ClientSetup_09_DNSSettings.png)
 
-3. Test domain DNS resolution:
+---
+
+### Flush DNS
+
+ipconfig/flushdns
+
+---
+
+### Test DNS Resolution
+
 nslookup lab.local
 
+Expected output:
 
-Expected:
+![nslookup](./Images/Lab2_ClientSetup_11_nslookup_lab_local.png)
 
-DNS Server: 10.0.0.124
+---
 
-Name: lab.local
-
-4. Join the domain:
+### Join the Domain
 
 Open:
 
-System Properties → Change settings → Change → Member of: Domain
+- This PC → Properties  
+- Change settings  
+- Change (computer name)  
+- Member of: **Domain**  
+- Enter: **lab.local**
 
-Enter:
+You will be prompted for domain credentials:
 
-lab.local
+![Domain Join Prompt](./Images/Lab2_ClientSetup_12_DomainJoinPrompt.png)
+
+When successful:
+
+![Domain Join Success](./Images/Lab2_ClientSetup_13_DomainJoinSuccess.png)
+
+Restart when prompted.
+
+---
+
+### Log Into the Domain
+
+At login screen choose **Other user**, then sign in as:
+
+LAB/Administrator
 
 
-When prompted, provide:
-
-Username: LAB\Administrator
-
-Password: your domain admin password
-
-5. Successful domain join:
-
-Restart the machine.
-
-6. Log into the domain
-
-On the login screen choose Other user and enter:
-
-Username: LAB\Administrator
+![Domain Login](./Images/Lab2_ClientSetup_11_DomainLoginScreen.png)
 
 Once logged in:
 
-7. Test login with standard user
+![Domain Admin Desktop](./Images/Lab2_ClientSetup_12_DomainAdminDesktop.png)
 
-Example: LAB\testuser
+Test a normal user:
 
-🔹 4. Enable Remote Desktop on the Client
+![Test User Login](./Images/Lab2_ClientSetup_13_TestUser_LoggedIn.png)
 
-On the Win10-Client:
+---
 
-Settings → System → Remote Desktop → Enable
+## 4. Enable Remote Desktop on Client
 
-Add allowed users:
+1. Go to:  
+   Settings → System → Remote Desktop  
+   Enable Remote Desktop
 
-Click Select users → Add:
+2. Add allowed user:
 
-LAB\testuser
+LAB/testuser
 
+![RDP Settings](./Images/Lab2_ClientSetup_14_Server_RDP_Settings.png)
 
-🔹 5. Test RDP from the Server
-1. On the Server 2022 VM:
+---
+
+## 5. Test RDP from the Server
+
+### Open RDP Client
 
 Press:
 
 Win + R → mstsc
 
-
-Enter:
+Enter the client IP:
 
 10.0.0.52
 
+![RDP Connect](./Images/Lab2-Client-RDP-Session-Open.png)
 
-2. Enter domain credentials:
+---
 
-3. Approve the connection on the client:
+### Enter Credentials
 
-4. Successful remote desktop session:
+![RDP Creds](./Images/Lab2-RDP-Enter-Credentials.png)
 
-5. Verify user context:
+---
+
+### Approve Connection on Client
+
+![RDP Prompt](./Images/Lab2-Remote-Desktop-Prompt.png)
+
+---
+
+### Successful RDP Session
+
+![RDP Active](./Images/Lab2-RemoteDesktop-SessionActive.png)
+
+Run inside RDP:
 whoami
 
+![Client Controlled](./Images/RemoteDesktop-Client-Controlled-Session.png)
 
-🔹 6. Skills Demonstrated
+---
 
-Windows 10 installation & configuration
+## 6. Skills Demonstrated
 
-DNS configuration for domain clients
+- Windows 10 installation  
+- Active Directory domain join  
+- DNS troubleshooting (`nslookup`, `ping`)  
+- Remote Desktop configuration  
+- Domain authentication  
+- Multi-VM networking  
+- Basic sysadmin operations  
 
-Domain join troubleshooting
+---
 
-ICMP & DNS testing (ping, nslookup)
+📄 **Full Lab Report (PDF):**  
+[Download Lab 2 Report](./Lab2-Win10-Client-DomainJoin-DNS-RDP.pdf)
 
-RDP configuration & remote administration
-
-Domain user authentication
-
-Basic sysadmin workflow in a multi-VM environment
